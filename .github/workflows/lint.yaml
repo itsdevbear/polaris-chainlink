@@ -17,7 +17,7 @@ jobs:
         id: go-version
       - run: echo ${{ steps.go-version.outputs.golang_version }}
       - name: Install Go ${{ steps.go-version.outputs.golang_version }}
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ steps.go-version.outputs.golang_version }}
       - name: golangci-lint
@@ -33,7 +33,7 @@ jobs:
       id: go-version
     - run: echo ${{ steps.go-version.outputs.golang_version }}
     - name: Install Go ${{ steps.go-version.outputs.golang_version }}
-      uses: actions/setup-go@v3
+      uses: actions/setup-go@v4
       with:
         go-version: ${{ steps.go-version.outputs.golang_version }}
     - name: Write Go List
