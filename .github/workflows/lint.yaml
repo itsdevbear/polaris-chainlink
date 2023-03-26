@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - uses: smartcontractkit/tool-versions-to-env-action@v1.0.7
       id: go-version
     - run: echo ${{ steps.go-version.outputs.golang_version }}
